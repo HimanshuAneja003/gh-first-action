@@ -1,19 +1,9 @@
-#First define the name(key) of the Action 
 name: First Workflow
-#We need to define events or event when this workflow should be executed.
-# We can do this by adding "on" key
-#workflow_dispatch It is event which will wait for the user to start the event munally.
 on: workflow_dispatch
-#We need to define what work needs to be done
-#We can define using "jobs" key
 jobs: 
-  #first job with any name
   first-job: 
-    #we are define the job runner using runs-on
-    runs-on: macos-12
-    #we need to define steps using "steps" key
+    runs-on: ubuntu-latest
     steps: 
-      #Define list of setps
       - name: Print greeting
         run: echo "Hello World"
       - name: Print goodbye
